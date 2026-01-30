@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-victory-red: #d1302e;
+  --color-stadium-black: #0d0d0d;
+  --color-referee-white: #ffffff;
+  --color-charcoal: #1a1a1a;
+  
+  --font-athletic: "Inter", sans-serif;
+  --font-tech: var(--font-orbitron);
+  --font-body: var(--font-rajdhani);
+
+  --shadow-glow: 0 0 15px rgba(209, 48, 46, 0.4);
+  --shadow-glow-intense: 0 0 25px rgba(209, 48, 46, 0.6);
+}
+
+:root {
+  --background: var(--color-stadium-black);
+  --foreground: var(--color-referee-white);
+}
+
+body {
+  background-color: var(--color-stadium-black);
+  color: var(--color-referee-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .athletic {
+  font-family: var(--font-athletic);
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.tech {
+  font-family: var(--font-tech);
+  letter-spacing: 0.1em;
+}
+
+/* Skewed Container Utility */
+.skew-container {
+  transform: skewY(-5deg);
+}
+
+.skew-content {
+  transform: skewY(5deg);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--color-victory-red);
+}
